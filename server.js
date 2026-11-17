@@ -53,7 +53,7 @@ app.use(helmet({
     directives: {
       "style-src": ["'self'", "https://fonts.googleapis.com", "'unsafe-inline'"],
       "font-src": ["'self'", "https://fonts.gstatic.com"],
-      "script-src": ["'self'", "'wasm-unsafe-eval'"],   // OpenCV.js usa WebAssembly
+      "script-src": ["'self'", "'wasm-unsafe-eval'", "'unsafe-eval'"], // OpenCV.js 4.x usa new Function() además de WebAssembly
       "worker-src": ["'self'"],
       "img-src": ["'self'", "data:", "blob:"],
       "connect-src": ["'self'"],
